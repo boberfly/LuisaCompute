@@ -187,7 +187,7 @@ unsafe extern "C" fn create_device(
                 let swapchain_dll = if cfg!(target_os = "windows") {
                     "lc-backend-cpu.dll"
                 } else if cfg!(target_os = "linux") || cfg!(target_os = "macos") {
-                    "liblc-backend-cpu.dylib"
+                    "liblc-backend-cpu.so"
                 } else {
                     todo!()
                 };
